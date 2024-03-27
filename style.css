@@ -1,0 +1,50 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    background-color: blueviolet;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+a::before{
+    content: 'button';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+}
+a::after{
+    content: 'Download MY RESUME';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(14, 231, 14);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+    transition-delay: .25s;
+}
+a:hover::before,
+a:hover::after{
+    transform: translateX(0);
+}
